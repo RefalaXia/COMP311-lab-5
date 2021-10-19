@@ -80,7 +80,7 @@ main:
   
   while:
 				# While (width != 0)
-  bne	$8, $0, main
+  bne	$8, $0, main		# if $8 != 0, jump to main
   j	while			# }	
   							
   							
