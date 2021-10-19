@@ -60,7 +60,7 @@ main:
   add	$10, $8, $9			# width + height and bring the sum into $10
   sll	$10, $10, 1			# multiply the sum by 2
   
-  				# Its perimeter is "
+  				# Print "Its perimeter is "
   addi 	$v0, $0, 4  			# system call 4 is for printing a string
   la	$a0, perimeterIs		# address of perimeterIs string is in $a0
   syscall				# print the string
