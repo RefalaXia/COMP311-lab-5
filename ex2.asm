@@ -27,7 +27,7 @@ main:
   syscall 				# integer value read is in $v0
   add	$8, $0, $v0			# copy the width into $8
   
-  beq	$8, $0, exit		# width = 0?
+  beq	$8, $0, exit		# width = 0?, if width = 0, jump to exit
 
 				# Print the prompt for height
   addi 	$v0, $0, 4  			# system call 4 is for printing a string
@@ -80,7 +80,7 @@ main:
   
   while:
 				# While (width != 0)
-  bne	$8, $0, main		# if $8 != 0, jump to main
+  bne	$8, $0, main		# if width != 0, jump to main
   j	while			# }	
   							
   							
